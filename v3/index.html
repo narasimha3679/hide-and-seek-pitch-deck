@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hide and Seek - Harsha Muvva</title>
+<meta name="description" content="Hide and Seek. A psychological crime thriller by Harsha Muvva. An interactive 3D visual pitch for production houses.">
+<!-- CONTACT: replace CONTACT_EMAIL below with Harsha's real email before sending this link out. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<style>.variation-switcher{position:fixed;left:0;right:0;bottom:0;z-index:99999;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;padding:10px 12px;background:rgba(0,0,0,.92);border-top:1px solid #d4af37;color:#f2ead2;font-family:system-ui,sans-serif;font-size:13px}.variation-switcher a{color:#e8c96a;text-decoration:none}.variation-switcher a.vs-current{color:#fff;font-weight:700;text-decoration:underline}body{padding-bottom:48px!important}</style></head>
+<body>
+<canvas id="webgl" aria-label="Interactive 3D journey through Hide and Seek"></canvas>
+
+<header class="topbar">
+  <span class="brand">HIDE <span>&amp;</span> SEEK</span>
+  <span class="top-note">For producers</span>
+</header>
+
+<!-- One fixed text layer. Only opacity and transform change, never layout. -->
+<div class="labels" id="labels" aria-live="off">
+  <div class="label active" data-scene="0">
+    <p class="kicker">Psychological crime thriller</p>
+    <h1>HIDE <em>&amp;</em> SEEK</h1>
+    <p class="line">A magician trapped in his own illusion.</p>
+    <p class="cue">Scroll to enter</p>
+  </div>
+  <div class="label" data-scene="1">
+    <p class="kicker">01</p><h2>The man on the stage</h2><p class="line">Fortunes vanish. No one sees how.</p>
+  </div>
+  <div class="label" data-scene="2">
+    <p class="kicker">02</p><h2>Hide and seek</h2><p class="line">21. 22. 91. 92.</p>
+  </div>
+  <div class="label" data-scene="3">
+    <p class="kicker">03</p><h2>Ready or not</h2><p class="line">The house keeps a secret.</p>
+  </div>
+  <div class="label" data-scene="4">
+    <p class="kicker">04</p><h2>She returns</h2><p class="line">Only he can see her.</p>
+  </div>
+  <div class="label" data-scene="5">
+    <p class="kicker">05</p><h2>The mansion becomes a stage</h2><p class="line">The audience does not know.</p>
+  </div>
+  <div class="label" data-scene="6">
+    <p class="kicker">06</p><h2>The audience arrives</h2><p class="line">Everyone from that night. One roof.</p>
+  </div>
+  <div class="label" data-scene="7">
+    <p class="kicker">The twist</p><h2>She was the officer's daughter.</h2><p class="line">He never locked the door. Who is the one?</p>
+  </div>
+  <div class="label" data-scene="8">
+    <p class="kicker">Ladies and gentlemen</p><h2>The magic show is about to begin.</h2><p class="line">The most difficult illusion to escape is the one we desperately wish were real.</p>
+  </div>
+  <div class="label" data-scene="9">
+    <p class="kicker">From the director</p><h2>Harsha Muvva</h2><p class="line">Private pitch. Full script and deck on request.</p>
+    <a class="btn" href="mailto:CONTACT_EMAIL?subject=Hide%20and%20Seek%20-%20Production%20Enquiry">Contact the director</a>
+  </div>
+</div>
+
+<div class="hud" aria-hidden="true">
+  <span id="sceneNum">01</span><span class="hud-sep">/</span><span>10</span>
+  <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+</div>
+
+<div class="loader" id="loader" aria-hidden="true"><span>Loading the theatre</span></div>
+
+<!-- Fallback only: shown if WebGL or Three.js is unavailable. No animations here. -->
+<noscript><div class="fallback-note">This pitch is best with JavaScript and WebGL enabled. The images below are the same story, in order.</div></noscript>
+<div class="fallback" id="fallback" hidden>
+  <h1>Hide and Seek</h1>
+  <p>A magician trapped in his own illusion.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+<script src="script.js"></script>
+<nav class="variation-switcher" aria-label="Site variations"><span>Variations:</span> <a href="../">Default</a> <a href="../v1/">V1</a> <a href="../v2/">V2</a> <a href="./" class="vs-current">V3</a> <a href="../v4/">V4</a></nav></body>
+</html>
